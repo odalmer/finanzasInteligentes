@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World!</h1>
+<p>Welcome to my first Django project!</p>
+
+<h2>Lista de Miembros</h2>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+    </tr>
+    {% for miembro in datos %}
+    <tr>
+        <td>{{ miembro.firstname }}</td>
+        <td>{{ miembro.lastname }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<img src="{% static '' %}" alt="Django">
+<img src="{% static 'members/guia.jpg' %}" alt="My image">
+
+</body>
+</html>
