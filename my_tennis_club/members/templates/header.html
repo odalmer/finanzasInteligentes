@@ -1,16 +1,20 @@
-<!-- header.html -->
+{% load static %}
 <header>
-    <div class="container">
-        <h1>Mi Sitio Web</h1>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="{% url 'privacy_policy' %}">Políticas de Privacidad</a></li>
-                <li><a href="{% url 'contact' %}">Contacto</a></li>
-                <li><a href="{% url 'news' %}">Noticias</a></li>
-                <li><a href="{% url 'list' %}">Artículos</a></li>
-                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
+    <div class="logo">
+        <h1>Finanzas Inteligentes</h1>
     </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            <li><a href="{% url 'privacy_policy' %}">Políticas</a></li>
+            <li><a href="{% url 'contact' %}">Contacto</a></li>
+            <li><a href="{% url 'news' %}">Noticias</a></li>
+            <li><a href="{% url 'list' %}">Artículos</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+            {% endif %}
+        </ul>
+    </nav>
 </header>

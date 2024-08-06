@@ -124,6 +124,12 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "myapp/css",
+    BASE_DIR / "members/static/css",
 ]
+
+LOGIN_REDIRECT_URL = '/'  # A dónde redirigir después de un login exitoso
+LOGIN_URL = 'login'  # URL para la página de login
+
+
+
 

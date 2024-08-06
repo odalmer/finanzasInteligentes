@@ -1,17 +1,11 @@
-<!-- templates/list.html -->
 {% extends 'index.html' %}
-{% include 'header.html' %}
-
+{% block title %}Artículos{% endblock %}
 {% block content %}
-<div class="content">
-    <h1>Listado de Artículos</h1>
-    <ul class="item-list">
-        <li>Artículo 1 - Descripción del artículo 1</li>
-        <li>Artículo 2 - Descripción del artículo 2</li>
-        <li>Artículo 3 - Descripción del artículo 3</li>
-        <!-- Añade más artículos aquí -->
-    </ul>
-</div>
+<h2>Artículos</h2>
+<ul>
+    <li>Artículo 1</li>
+    <li>Artículo 2</li>
+    <li>Artículo 3</li>
+    <!-- Más artículos aquí -->
+</ul>
 {% endblock %}
-
-{% include 'footer.html' %}
