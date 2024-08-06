@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="profile-container">
+    <h2>Perfil de {{ user.username }}</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</div>
+{% endblock %}
