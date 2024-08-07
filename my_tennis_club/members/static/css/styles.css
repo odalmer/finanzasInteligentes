@@ -12,13 +12,20 @@ body {
     color: #ffffff;
 }
 .dark-mode .social-icons a {
-    color: #000000;
+    color: #ffffff;
 }
 .dark-mode footer {
     background-color: #1e1e1e;
-    color: #000000;
+    color: #ffffff;
     border-top: 1px solid #ffffff;
 }
 .dark-mode footer a {
     color: #ffffff;
+}
+
+.carousel-image {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 auto;
 }
