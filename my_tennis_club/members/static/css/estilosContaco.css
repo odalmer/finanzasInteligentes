@@ -1,0 +1,104 @@
+/* Estilos de la seccion de contacto */
+#backgroundContact {
+  background-image: url(https://plus.unsplash.com/premium_photo-1679923813998-6603ee2466c5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmluYW5jZXxlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  background-color: #062e66;
+}
+
+#name,
+#subject,
+#message {
+  border-radius: 5px;
+  background-color: rgb(225, 248, 233);
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto 20px auto; 
+  display: block;
+  font-size: large;
+}
+
+.cuadroContact {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 80px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+  font-size: larger;
+}
+
+#contactHeader {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin: auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgb(0, 0, 0); /* Añade sombra al h1 */
+}
+
+.sendEmail {
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #062e66;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: large;
+}
+
+.sendEmail:hover {
+  background-color: gold;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Estilos responsivos*/
+@media (max-width: 768px) {
+  .cuadroContact {
+    margin: 40px auto;
+    padding: 15px;
+  }
+
+  #contactHeader {
+    font-size: 2.5rem;
+  }
+
+  .sendEmail {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contactHeader {
+    font-size: 2rem;
+  }
+
+  #name,
+  #email,
+  #message {
+    width: 90%;
+  }
+
+  .sendEmail {
+    width: 100%;
+    font-size: 0.85;
+  }
+
+  .cuadroContact {
+    padding: 10px;
+  }
+}
