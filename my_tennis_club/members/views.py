@@ -1,10 +1,13 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
+from .models import EditableContent
+
 
 def index(request):
     return render(request, 'index.html')
+
 
 def signin(request):
     if request.method == 'GET':
@@ -20,21 +23,30 @@ def signin(request):
         else:
             login(request, user)
             return redirect('/admin/')
-        
+
+
 def detalles_ahorrar(request):
-    return render(request, 'detalles_ahorrar.html')
+    # Obtiene un solo objeto basado en el ID (pk)
+    objeto = get_object_or_404(EditableContent, pk=0)
+    return render(request, 'detalles_ahorrar.html',  {'objeto': objeto})
 
 def detalles_inversion(request):
-    return render(request, 'detalles_inversion.html')
+    objeto = get_object_or_404(EditableContent, pk=1)
+    return render(request, 'detalles_inversion.html',  {'objeto': objeto})
 
 def detalles_deuda(request):
-    return render(request, 'detalles_deuda.html')
+    objeto = get_object_or_404(EditableContent, pk=2)
+    return render(request, 'detalles_deuda.html',  {'objeto': objeto})
 
 def detalles_planificacion(request):
-    return render(request, 'detalles_planificacion.html')
+    objeto = get_object_or_404(EditableContent, pk=3)
+    return render(request, 'detalles_planificacion.html',  {'objeto': objeto})
 
 def detalles_jubilacion(request):
-    return render(request, 'detalles_jubilacion.html')
+    objeto = get_object_or_404(EditableContent, pk=4)
+    return render(request, 'detalles_jubilacion.html',  {'objeto': objeto})
+
 
 def detalles_ahorro_inteligente(request):
-    return render(request, 'detalles_ahorro_inteligente.html')
+    objeto = get_object_or_404(EditableContent, pk=5)
+    return render(request, 'detalles_ahorro_inteligente.html',  {'objeto': objeto})

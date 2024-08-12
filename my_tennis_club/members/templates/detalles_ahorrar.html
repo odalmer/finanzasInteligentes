@@ -5,15 +5,10 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1>5 Consejos para Ahorrar en 2024</h1>
-    <p>Ahorro y planificación financiera son claves para una vida económica saludable. En 2024, la necesidad de ajustar nuestros hábitos financieros es más importante que nunca. Aquí te presentamos cinco consejos detallados para que puedas empezar a ahorrar de manera más efectiva:</p>
-    <ul>
-        <li><strong>Haz un presupuesto realista:</strong> Un presupuesto bien estructurado es la base de un buen plan de ahorro. Identifica todas tus fuentes de ingresos y clasifica tus gastos en esenciales y no esenciales. Revisa tus gastos mensuales y busca áreas donde puedas recortar sin comprometer tu calidad de vida.</li>
-        <li><strong>Reduce tus gastos innecesarios:</strong> Revisa tus hábitos de consumo y pregúntate si todos los gastos que realizas son realmente necesarios. Cancela suscripciones que no usas, cocina más en casa en lugar de comer fuera, y busca alternativas más económicas para el entretenimiento. Cada pequeño cambio suma a largo plazo.</li>
-        <li><strong>Automatiza tus ahorros:</strong> Configura transferencias automáticas desde tu cuenta principal a una cuenta de ahorros. Esto te ayudará a ahorrar sin tener que pensar en ello cada mes, creando un colchón financiero con el tiempo sin esfuerzo adicional.</li>
-        <li><strong>Compra de manera inteligente:</strong> Antes de realizar una compra, investiga diferentes opciones y compara precios. Espera a las rebajas o utiliza cupones de descuento cuando sea posible. A largo plazo, estas prácticas pueden generar ahorros significativos.</li>
-        <li><strong>Planifica para el largo plazo:</strong> Establece metas financieras claras, como ahorrar para la jubilación, un fondo de emergencia o una compra importante. Trabaja en función de estas metas con disciplina y ajusta tu plan según sea necesario para asegurar que te mantienes en el camino correcto.</li>
-    </ul>
-    <p>Siguiendo estos consejos, estarás en una mejor posición para enfrentar cualquier desafío financiero que pueda surgir en 2024 y más allá.</p>    
+    <h1>{{ objeto.title }}</h1>
+    {% if objeto.image %}
+    <img src="{{ objeto.image.url }}" alt="{{ objeto.title }}" style="max-width: 500px;">
+    {% endif %}
+    {{objeto.content|safe}}
 </div>
 {% endblock %}
