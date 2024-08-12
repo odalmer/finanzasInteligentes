@@ -72,6 +72,50 @@
     </div>
 </section>
 
+    <!-- Contact -->
+    <section id="contact" class="container my-4">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros a través de nuestro formulario de contacto. Estamos aquí para ayudarte.</p>
+        <div id="backgroundContact">
+    <div>
+      <br />
+      <br />
+      <h1 id="contactHeader">Contáctanos</h1>
+      <div class="cuadroContact" st>
+        <h2>Formulario de Contacto</h2>
+        <form id="form" method="POST" action="/send-email">
+          <div class="nombreContacto">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required /><br /><br />
+          </div>
+          <div class="asuntoContacto">
+            <label for="subject">Asunto:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+            /><br /><br />
+          </div>
+          <div class="mensageContacto">
+            <label for="message">Mensaje:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="13"
+              cols="130"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="sendEmail">Enviar</button>
+        </form>
+       
+    
+      </div>
+    </div>
+  </div>
+    </section>
+
 <!-- Contact -->
 <section id="contact" class="container my-4">
     <h2>Contacto</h2>
