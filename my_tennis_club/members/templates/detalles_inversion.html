@@ -4,19 +4,11 @@
 {% block title %}Home - Finance Site{% endblock %}
 
 {% block content %}
-<body>
-    <div class="container my-5">
-        <h1>Oportunidades de Inversión en el Mercado Actual</h1>
-        <p>El entorno económico actual está lleno de incertidumbres, pero también de oportunidades. Invertir de manera informada puede ser la diferencia entre un rendimiento mediocre y uno excelente. A continuación, exploramos algunas de las oportunidades de inversión más prometedoras en 2024:</p>
-        <h2>Tecnología: El Futuro de la Inversión</h2>
-        <p>El sector tecnológico sigue siendo un pilar fundamental para los inversionistas. Con avances continuos en áreas como la inteligencia artificial, la robótica, y la biotecnología, las empresas tecnológicas están en la cúspide de la innovación. Invertir en acciones de empresas emergentes o en fondos tecnológicos puede ofrecer altos rendimientos, aunque también implica un mayor riesgo.</p>
-        <h2>Bienes Raíces: Seguridad a Largo Plazo</h2>
-        <p>A pesar de las fluctuaciones en el mercado inmobiliario, la inversión en bienes raíces sigue siendo una de las opciones más seguras a largo plazo. Ya sea a través de la compra directa de propiedades o la inversión en fideicomisos de inversión inmobiliaria (REITs), los bienes raíces ofrecen estabilidad y la posibilidad de ingresos pasivos continuos.</p>
-        <h2>Energías Renovables: Un Sector en Crecimiento</h2>
-        <p>Con el cambio climático en el centro de la agenda global, las energías renovables se han convertido en un sector clave. Invertir en empresas dedicadas a la energía solar, eólica o hidroeléctrica no solo es una decisión ética, sino también una apuesta inteligente a medida que el mundo se aleja de los combustibles fósiles. Este sector, aunque joven, promete un crecimiento significativo en los próximos años.</p>
-        <h2>Inversiones Internacionales: Diversificación Geográfica</h2>
-        <p>Diversificar tu cartera con inversiones en mercados internacionales puede protegerte contra la volatilidad local. Considera invertir en economías emergentes, donde el crecimiento es rápido y las oportunidades son abundantes. Sin embargo, es importante estar al tanto de los riesgos políticos y económicos asociados con estas inversiones.</p>
-        <p>Al evaluar estas opciones, recuerda siempre la importancia de diversificar tu cartera y adaptar tu estrategia a tu perfil de riesgo. Invertir con conocimiento y precaución es la clave para maximizar tus rendimientos en 2024.</p>        
-    </div>
-</body>
+<div class="container my-5">
+    <h1>{{ objeto.title }}</h1>
+    {% if objeto.image %}
+    <img src="{{ objeto.image.url }}" alt="{{ objeto.title }}" style="max-width: 500px;">
+    {% endif %}
+    {{objeto.content|safe}}
+</div>
 {% endblock %}

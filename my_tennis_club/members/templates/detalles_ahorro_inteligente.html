@@ -5,18 +5,10 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1>Gastos Inteligentes: Cómo Maximizar Tu Dinero</h1>
-    <p>El manejo inteligente de tus gastos puede marcar una gran diferencia en tu estabilidad financiera a largo plazo. Aprender a gastar sabiamente te permitirá obtener más valor por cada centavo, manteniendo un equilibrio saludable entre necesidades y deseos. A continuación, te ofrecemos algunas estrategias detalladas para maximizar tu dinero:</p>
-    <h2>Compara Precios Antes de Comprar</h2>
-    <p>Antes de realizar cualquier compra significativa, tómate el tiempo para comparar precios en diferentes tiendas o sitios web. Existen numerosas herramientas en línea que pueden ayudarte a encontrar las mejores ofertas y asegurarte de que no estás pagando de más por lo que necesitas.</p>
-    <h2>Aprovecha las Ofertas y Descuentos</h2>
-    <p>Los descuentos y las ofertas especiales son oportunidades perfectas para ahorrar dinero. Mantente informado sobre las temporadas de rebajas, utiliza cupones y aprovecha las promociones. Sin embargo, asegúrate de que estas compras sean de cosas que realmente necesitas, para evitar el gasto innecesario.</p>
-    <h2>Invierte en Productos de Calidad</h2>
-    <p>En lugar de optar siempre por la opción más barata, considera invertir en productos de calidad que duren más tiempo. Esto es especialmente importante en artículos que usas con frecuencia, como electrodomésticos, ropa y muebles. A la larga, esto puede ahorrarte dinero al reducir la necesidad de reemplazos frecuentes.</p>
-    <h2>Evita las Compras Impulsivas</h2>
-    <p>Las compras impulsivas pueden drenar rápidamente tus finanzas. Antes de hacer una compra, pregúntate si realmente necesitas el artículo y si puedes permitirte comprarlo sin afectar tu presupuesto. Si es posible, espera 24 horas antes de tomar una decisión de compra, lo que te permitirá reflexionar y evitar decisiones precipitadas.</p>
-    <h2>Planifica tus Gastos y Prioriza</h2>
-    <p>Crea un plan de gastos mensual que priorice lo esencial y deja espacio para ahorrar. Identifica áreas donde puedas reducir costos y redirige esos fondos hacia ahorros o inversiones. Tener un plan claro te ayudará a tomar decisiones financieras más conscientes y evitar el derroche.</p>
-    <p>Implementando estos hábitos, podrás maximizar el valor de tu dinero, disfrutar de una mayor seguridad financiera y alcanzar tus metas a largo plazo sin sacrificar tu calidad de vida.</p>    
+    <h1>{{ objeto.title }}</h1>
+    {% if objeto.image %}
+    <img src="{{ objeto.image.url }}" alt="{{ objeto.title }}" style="max-width: 500px;">
+    {% endif %}
+    {{objeto.content|safe}}
 </div>
 {% endblock %}

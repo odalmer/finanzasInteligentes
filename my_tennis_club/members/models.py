@@ -7,8 +7,9 @@ class Member(models.Model):
 
 class EditableContent(models.Model):
     title = models.CharField(max_length=100)
+    detalle = models.CharField(max_length=100, null=True)
     content = models.TextField()
-    image = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image = models.ImageField(blank=True, null=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

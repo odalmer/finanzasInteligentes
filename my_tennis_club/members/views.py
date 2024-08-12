@@ -6,7 +6,8 @@ from .models import EditableContent
 
 
 def index(request):
-    return render(request, 'index.html')
+    objetos = EditableContent.objects.all()
+    return render(request, 'index.html', {'objetos': objetos})
 
 
 def signin(request):
@@ -27,26 +28,26 @@ def signin(request):
 
 def detalles_ahorrar(request):
     # Obtiene un solo objeto basado en el ID (pk)
-    objeto = get_object_or_404(EditableContent, pk=0)
+    objeto = get_object_or_404(EditableContent, pk=1)
     return render(request, 'detalles_ahorrar.html',  {'objeto': objeto})
 
 def detalles_inversion(request):
-    objeto = get_object_or_404(EditableContent, pk=1)
+    objeto = get_object_or_404(EditableContent, pk=2)
     return render(request, 'detalles_inversion.html',  {'objeto': objeto})
 
 def detalles_deuda(request):
-    objeto = get_object_or_404(EditableContent, pk=2)
+    objeto = get_object_or_404(EditableContent, pk=3)
     return render(request, 'detalles_deuda.html',  {'objeto': objeto})
 
 def detalles_planificacion(request):
-    objeto = get_object_or_404(EditableContent, pk=3)
+    objeto = get_object_or_404(EditableContent, pk=5)
     return render(request, 'detalles_planificacion.html',  {'objeto': objeto})
 
 def detalles_jubilacion(request):
-    objeto = get_object_or_404(EditableContent, pk=4)
+    objeto = get_object_or_404(EditableContent, pk=6)
     return render(request, 'detalles_jubilacion.html',  {'objeto': objeto})
 
 
 def detalles_ahorro_inteligente(request):
-    objeto = get_object_or_404(EditableContent, pk=5)
+    objeto = get_object_or_404(EditableContent, pk=4)
     return render(request, 'detalles_ahorro_inteligente.html',  {'objeto': objeto})
