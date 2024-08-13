@@ -59,7 +59,6 @@ body {
   color: white;
   font-weight: bold;
   font-size: large;
-  background-color: #062e66;
 }
 
 #name,
@@ -82,7 +81,7 @@ body {
   padding: 10px;
   margin: 80px auto;
   max-width: 800px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
   font-size: larger;
 }
 
@@ -96,7 +95,7 @@ body {
   margin: auto;
   max-width: 1000px;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgb(0, 0, 0); /* Añade sombra al h1 */
+  box-shadow: 0 8px 16px rgb(0, 0, 0); 
 }
 
 .sendEmail {
