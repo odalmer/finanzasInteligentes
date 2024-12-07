@@ -31,17 +31,21 @@ def detalles_ahorrar(request):
     objeto = get_object_or_404(EditableContent, pk=1)
     return render(request, 'detalles_ahorrar.html',  {'objeto': objeto})
 
+
 def detalles_inversion(request):
     objeto = get_object_or_404(EditableContent, pk=2)
     return render(request, 'detalles_inversion.html',  {'objeto': objeto})
+
 
 def detalles_deuda(request):
     objeto = get_object_or_404(EditableContent, pk=3)
     return render(request, 'detalles_deuda.html',  {'objeto': objeto})
 
+
 def detalles_planificacion(request):
     objeto = get_object_or_404(EditableContent, pk=5)
     return render(request, 'detalles_planificacion.html',  {'objeto': objeto})
+
 
 def detalles_jubilacion(request):
     objeto = get_object_or_404(EditableContent, pk=6)
@@ -51,3 +55,12 @@ def detalles_jubilacion(request):
 def detalles_ahorro_inteligente(request):
     objeto = get_object_or_404(EditableContent, pk=4)
     return render(request, 'detalles_ahorro_inteligente.html',  {'objeto': objeto})
+
+
+def presupuesto(request):
+    # objeto = get_object_or_404(EditableContent, pk=1)
+    return render(request, 'presupuesto.html')
+
+
+def mantenimiento(request):
+    return render(request, 'mantenimiento.html')

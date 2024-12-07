@@ -18,6 +18,10 @@ urlpatterns = [
          name='detalles_jubilacion'),
     path('detalles-ahorro-inteligente/', views.detalles_ahorro_inteligente,
          name='detalles_ahorro_inteligente'),
+    path('presupuesto/', views.presupuesto,
+         name='presupuesto'),
+    path('mantenimiento/', views.mantenimiento,
+         name='mantenimiento'),
 ]
 
 if settings.DEBUG:

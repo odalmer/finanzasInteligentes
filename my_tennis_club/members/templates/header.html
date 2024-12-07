@@ -9,7 +9,7 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#home">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#news">Noticias</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#privacy-policy">Políticas</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#contact">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="presupuesto/">Presupuesto</a></li>
                 <li class="nav-item">
                     {% if user.is_authenticated %}
                     <form method="post" action="{% url 'logout' %}">
